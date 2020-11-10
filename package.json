@@ -4,8 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+<<<<<<< HEAD
     "dev": "webpack --config webpack.dev.js",
     "start": "webpack --mode production"
+=======
+    "start": "webpack-dev-server --hot --open",
+    "build": "webpack --config webpack.config.js --mode production"
+>>>>>>> 22ece69a962e688c26562fe87ba10ece5cb854f6
   },
   "repository": {
     "type": "git",
@@ -28,7 +33,10 @@
     "@babel/preset-react": "^7.10.4",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
+<<<<<<< HEAD
     "clean-webpack-plugin": "^3.0.0",
+=======
+>>>>>>> 22ece69a962e688c26562fe87ba10ece5cb854f6
     "eslint": "^7.13.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-loader": "^4.0.2",
