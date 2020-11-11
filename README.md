@@ -15,3 +15,9 @@ Application that will enable its “Company Nomads” book their international t
 \- **Redux**: to manage the App state
 
 \- **Webpack**: to bundle the App files
+
+## Testing
+
+To test the application run
+
+`npm run test`
