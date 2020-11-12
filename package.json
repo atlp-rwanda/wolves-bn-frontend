@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "webpack --config webpack.dev.js && webpack-dev-server --hot --open",
     "start": "webpack --mode production",
+    "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
   },
