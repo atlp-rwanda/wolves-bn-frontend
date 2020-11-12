@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --config webpack.dev.js",
-    "start": "webpack --mode production"
+    "dev": "webpack --config webpack.dev.js && webpack-dev-server --hot --open",
+    "start": "webpack --mode production",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,9 @@
   },
   "homepage": "https://github.com/atlp-rwanda/wolves-bn-frontend#readme",
   "dependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "jest": "^26.6.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
