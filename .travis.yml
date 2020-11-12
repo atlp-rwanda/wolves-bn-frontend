@@ -7,3 +7,5 @@ script:
   - npm run test:coveralls
 notifications:
   email: false
+env:
+  - NODE_ENV=development

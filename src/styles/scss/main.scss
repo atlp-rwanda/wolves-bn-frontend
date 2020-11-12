@@ -26,7 +26,6 @@ header{
     width: 100%;
     padding: 1rem;
 }
-//---new Tutorial
 @function weight($weight-name){
     @return map-get($font-weights , $weight-name );
 }
@@ -46,17 +45,12 @@ header{
     
 }
 .main{
-   // @include flexCenter;  //use mixins(remove parameter from flexCenter or use it or functions, or variables below
-    @include flexCenter(row); //use row or column
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
+     @include flexCenter(row); //use row or column
     width: 90%-10%; 
     margin: 0 auto;
     font-size: 18px;
 
     #{&}__paragraph1{
-        //font-weight:map-get($font-weights, bold );// using variables
         font-weight:weight( bold ); //using function call
     }
     &:hover{
@@ -84,9 +78,6 @@ header{
 .light{
     @include theme($light-theme:true);// false or true and see changes
 }
-
-
-//--end
 main{
     height: 100%;
     width: 100%;
