@@ -1,4 +1,7 @@
 # Barefoot Nomad
+[![Coverage Status](https://coveralls.io/repos/github/atlp-rwanda/wolves-bn-frontend/badge.svg?branch=develop)](https://coveralls.io/github/atlp-rwanda/wolves-bn-frontend?branch=develop) 
+
+[![Build Status](https://travis-ci.org/atlp-rwanda/wolves-bn-frontend.svg?branch=develop)](https://travis-ci.org/atlp-rwanda/wolves-bn-frontend)
 
 Application that will enable its “Company Nomads” book their international travel and accommodation globally; easily and conveniently across all the locations/centers where the Company has its operations.
 
