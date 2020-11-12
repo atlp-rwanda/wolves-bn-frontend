@@ -6,12 +6,15 @@ import Button from './button/button';
 import FancyButton from './fancy-button/fancy-button';
 import './styles/main.scss';
 import './styles/scss/main.scss';
+import { Provider } from 'react-redux';
+import Counter from './components/Counter';
+import store from './redux/store';
 
 const content = 'Welcome to barefoot Nomad Application!';
 class App extends Component {
   render() {
-    return (
-      <>
+    return ( 
+      <div>
         <div className="light">
           <h1>Welcome to Barefoot Nomad Application</h1>
           <div className="main">
@@ -33,7 +36,17 @@ class App extends Component {
         <div className='resizeable-both'>{content}</div>
         <Button className="button" label="Regular Button" />
         <FancyButton className="button" label="Fancy Button" />
-      </>
+        <Provider store={store}>
+
+            <React.StrictMode>
+
+            <Counter/>
+
+            </React.StrictMode>
+
+        </Provider>
+      </div>
+      
     );
   }
 }
