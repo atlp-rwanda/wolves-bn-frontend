@@ -3,14 +3,26 @@
 /* eslint-disable import/extensions */
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
+import { BrowserRouter as Router, Switch, Route, } from 'react-router-dom';
 import Counter from './components/Counter';
 import store from './redux/store';
+import Nav from './components/nav/nav';
+import Login from './components/login/login';
+import Home from './components/home/home';
+import Profile from './components/profile/profile';
 import Button from './button/button';
 // import FancyButton from './fancy-button/fancy-button';
 // import './styles/main.scss';
 // import './styles/scss/main.scss';
 
-// const content = 'Welcome to barefoot Nomad Application!';
+const content = 'Welcome to barefoot Nomad Application!';
+
+const New = () => (
+  <div>
+      <h1>WELCOME TO BARE FOOT NOMADE</h1>
+    </div>
+);
+
 class App extends Component {
   render() {
     // return (
@@ -39,6 +51,7 @@ class App extends Component {
     //   </>
     // );
     return (
+      <>
       <Provider store={store}>
 
         <React.StrictMode>
@@ -48,6 +61,42 @@ class App extends Component {
         </React.StrictMode>
 
       </Provider>
+
+        <Router>
+          <div className="App">
+            <Nav />
+            <Switch>
+              <Route path="/" exact component={New} />
+              <Route path="/login" component={Login} />
+              <Route path="/home" component={Home} />
+              <Route path="/profile" component={Profile} />
+            </Switch>
+
+          </div>
+        </Router>
+
+        <div className="light">
+          <h1>Welcome to Barefoot Nomad Application</h1>
+          <div className="main">
+            <div className="div">
+              <h4>What is Lorem Ipsum?</h4>
+              <p className="main__paragraph1">
+                Lorem Ipsum is simpzly.</p>
+            </div>
+
+            <div>
+              <h4>Why do we use it?</h4>
+              <p className="main__paragraph2">
+                It is a long established fact that a reader e (injected humour and the like).</p>
+            </div>
+
+          </div>
+
+        </div>
+        <div className='resizeable-both'>{content}</div>
+        <Button className="button" label="Regular Button" />
+        <FancyButton className="button" label="Fancy Button" />
+      </>
     );
   }
 }
