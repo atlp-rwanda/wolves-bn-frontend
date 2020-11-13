@@ -26,18 +26,14 @@ class Profile extends React.Component {
   }
 
   render() {
-    return (
-            <div>
+    return <div>
                 {this.state.items.map((element) => (
                 <div key={element.itemId} className="allItems">
                     <li>{element.item.name}</li>
                     <li>{element.item.description}</li>
                     <li>{element.item.rarity}</li>
-                </div>
-                ))}
-            </div>
-    );
+                </div>))}
+            </div>;
   }
 }
-
 export default Profile;

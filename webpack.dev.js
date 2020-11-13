@@ -30,7 +30,7 @@ module.exports = {
   ],
   resolve: {
     modules: [__dirname, 'src', 'node_modules'],
-    extensions: ['*', '.js', '.jsx', '.css'],
+    extensions: ['*', '.js', '.jsx'],
   },
   module: {
     rules: [
@@ -39,11 +39,6 @@ module.exports = {
         exclude: /node_modules/,
         use: ['babel-loader', 'eslint-loader'],
       },
-      {
-        test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
-      },
-
       {
         test: /\.png|svg|jpg|gif$/,
         use: ['file-loader'],
