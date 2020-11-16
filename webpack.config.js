@@ -46,14 +46,10 @@ module.exports = {
             loader: 'css-loader',
             options: {
               modules: true,
-              sourceMap: isDevelopment
             }
           },
           {
             loader: 'sass-loader',
-            options: {
-              sourceMap: isDevelopment
-            }
           }
         ]
       },
@@ -65,9 +61,6 @@ module.exports = {
           'css-loader',
           {
             loader: 'sass-loader',
-            options: {
-              sourceMap: isDevelopment
-            }
           }
         ]
       },
