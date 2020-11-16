@@ -1,6 +1,5 @@
 import userReducer from './counter';
 import * as actionTypes from '../actions/actionTypes';
-import mockedResponse from '../../-mocks-/mock';
 import initialState from '../store/initialState';
 
 describe('counter Reducers', () => {
