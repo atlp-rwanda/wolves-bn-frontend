@@ -5,7 +5,6 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/544c488fee48ebbcf156/maintainability)](https://codeclimate.com/github/atlp-rwanda/wolves-bn-frontend/maintainability)
 
-[![Test Coverage](https://api.codeclimate.com/v1/badges/544c488fee48ebbcf156/test_coverage)](https://codeclimate.com/github/atlp-rwanda/wolves-bn-frontend/test_coverage)
 
 [![deepcode](https://www.deepcode.ai/api/gh/badge?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwbGF0Zm9ybTEiOiJnaCIsIm93bmVyMSI6ImF0bHAtcndhbmRhIiwicmVwbzEiOiJ3b2x2ZXMtYm4tZnJvbnRlbmQiLCJpbmNsdWRlTGludCI6ZmFsc2UsImF1dGhvcklkIjoyNTMzNSwiaWF0IjoxNjA2Mzk1MzI2fQ.CfDhIeinhwoeCOTaYxTnRYbU5c7JSyeK-O98bwR5IDc)](https://www.deepcode.ai/app/gh/atlp-rwanda/wolves-bn-frontend/_/dashboard?utm_content=gh%2Fatlp-rwanda%2Fwolves-bn-frontend)
 
