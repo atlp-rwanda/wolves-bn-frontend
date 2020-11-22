@@ -8,6 +8,7 @@ const Dotenv = require('dotenv-webpack');
 module.exports = {
   entry: ['babel-polyfill', './src/index.js'],
   output: {
+    publicPath: '/',
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/'
@@ -80,5 +81,5 @@ module.exports = {
     hot: true,
     port: process.env.PORT,
     historyApiFallback: true,
-  },
+  }
 };

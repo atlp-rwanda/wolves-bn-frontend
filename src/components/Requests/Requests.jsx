@@ -1,4 +1,3 @@
-/* eslint-disable object-curly-newline */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchRequests } from '../../redux/actions/requests/requests';
