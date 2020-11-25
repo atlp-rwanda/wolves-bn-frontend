@@ -1,0 +1,17 @@
+.Request {
+    padding: 20px 30px;
+    color: #000;
+    margin-bottom: 20px;
+    background-color: #fff;
+    // border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(#000000, 0.2);
+    cursor: pointer;
+}
+
+.pending {
+    color: #E1C542;
+}
+
+.approved {
+    color: #529E66;
+}

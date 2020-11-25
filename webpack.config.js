@@ -3,14 +3,17 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const webpack = require('webpack');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: ['babel-polyfill', './src/index.js'],
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/'
   },
   plugins: [
+    new Dotenv(),
     new webpack.HotModuleReplacementPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
@@ -73,8 +76,9 @@ module.exports = {
     ],
   },
   devServer: {
-    contentBase: (__dirname + '/dist'),
+    contentBase: (`${__dirname}/dist`),
     hot: true,
-    port: process.env.PORT
-  }
+    port: process.env.PORT,
+    historyApiFallback: true,
+  },
 };
