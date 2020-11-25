@@ -1,7 +1,6 @@
 import React, {
   Component, useState, useEffect, useRef
 } from 'react';
-import { connect } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route, } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Welcome from './components/Home/Welcome';
@@ -9,11 +8,12 @@ import Nav from './components/nav/nav';
 import Login from './components/login/login';
 import Dashboard from './components/dashboard/dashboard';
 import Signup from './components/SignUp/signUp';
+import Profile from './components/Profile/Profile.jsx';
+import UpdateProfile from './components/Profile/UpdateProfile.jsx';
 import './styles/main.scss';
 import './styles/scss/main.scss';
 import Requests from './components/Requests/Requests.jsx';
 import ForgotPassword from './components/ForgotPassword';
-import Profile from './components/Profile';
 import userList from './components/users/usersList.jsx';
 
 class App extends Component {
@@ -27,9 +27,10 @@ class App extends Component {
             <Route path="/requests" component={Requests} />
             <Route path="/" exact component={Welcome} />
             <Route exact path="/dashboard" component={Dashboard}/>
+            <Route path='/updateprofile' component={UpdateProfile} />
             <Route path="/login" exact component={Login} />
             <Route path="/" exact component={Welcome} />
-              <Route path="/signup" exact component={Signup} />
+            <Route path="/signup" exact component={Signup} />
             <Route path="/login" exact component={Login} />
             <Route path="/profile" component={Profile} />
             <Route path='/forgotPassword'component={ForgotPassword} />
