@@ -1,6 +1,7 @@
 import React from 'react';
-import GoogleLogin from 'react-google-login';
-import axios from 'axios';
+import './socialLogin.scss';
+import facebookSvg from '../../assets/facebook.svg';
+import googleSvg from '../../assets/google.svg';
 
 class SocialLogin extends React.Component {
   constructor() {
@@ -22,8 +23,8 @@ class SocialLogin extends React.Component {
     return (
       <div>
          <div className='social'>
-            <button onClick={this.signInWithGoogle} type='submit' className='google'>Google</button>
-            <button onClick={this.signInWithFacebook} type='submit' className='facebook'>facebook</button>
+            <button className='social-btn google' onClick={this.signInWithGoogle} type='submit'><img src={googleSvg}/></button>
+            <button className='social-btn facebook' onClick={this.signInWithFacebook} type='submit'><img src={facebookSvg}/></button>
          </div>
       </div>
     );
