@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { BrowserRouter as Router, Switch, Route, } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Welcome from './components/Home/Welcome';
 import './styles/main.scss';
 import './styles/scss/main.scss';
 import Requests from './components/Requests/Requests.jsx';
+import ForgotPassword from './components/ForgotPassword';
+import Login from './components/Login';
+import Profile from './components/Profile';
 
 class App extends Component {
   render() {
@@ -13,13 +17,17 @@ class App extends Component {
         <div className="App">
           <Navbar />
           <Switch>
+            <Route path='/nav' exact component={Navbar} />
             <Route path="/requests" component={Requests} />
             <Route path="/" exact component={Welcome} />
+            <Route path="/login" exact component={Login} />
+            <Route path="/profile" component={Profile} />
+            <Route path='/forgotPassword'component={ForgotPassword} />
           </Switch>
         </div>
-      </div>
+     </div>
     );
   }
 }
 
-export default App;
+export default connect(null)(App);

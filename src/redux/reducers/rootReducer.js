@@ -1,12 +1,14 @@
 import { combineReducers } from 'redux';
 
-import countReducer from './counter';
 import requestsReducer from './requests/requests';
+import loginReducer from './login.reducer';
+import passwordReducer from './password.reducer';
 
 const rootReducer = combineReducers({
 
-  counter: countReducer,
-  requests: requestsReducer
+  requests: requestsReducer,
+  login: loginReducer,
+  reset: passwordReducer,
 
 });
 
