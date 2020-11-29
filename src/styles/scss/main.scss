@@ -1,107 +1,125 @@
 @import 'config';
 @import 'resets';
 
-body{
-   background: $primary-color;
-    color: set-tex-color($text-color);
+body {
+    //    background: $primary-color;
+    //     color: set-tex-color($text-color);
     height: 100vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1;
 }
-h1,h2,h3{
-    font-weight: 400;
-    text-align: center;
-    color: rgb(37, 143, 185);
+
+// h1,
+// h2,
+// h3 {
+//     font-weight: 400;
+//     text-align: center;
+//     color: rgb(37, 143, 185);
+// }
+
+// a {
+//     color: set-tex-color($primary-color);
+//     text-decoration: none;
+// }
+
+.text-secondary {
+    color: $secondary-color;
 }
-a{
-    color:set-tex-color($primary-color);
-    text-decoration: none;
-}
-.text-secondary{
-    color:$secondary-color;
-}
-header{
+
+header {
     position: fixed;
     z-index: 2;
     width: 100%;
     padding: 1rem;
 }
-@function weight($weight-name){
-    @return map-get($font-weights , $weight-name );
+
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name);
 }
-@mixin  flexCenter($direction) {
+
+@mixin flexCenter($direction) {
     display: flex;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: $direction;
-    
+
 }
-@mixin  mobile { 
+
+@mixin mobile {
     @media(max-width:$mobile) {
         @content;
-        
+
     }
-    
+
 }
-.main{
-     @include flexCenter(row); //use row or column
-    width: 90%-10%; 
+
+.main {
+    @include flexCenter(row); //use row or column
+    width: 90%-10%;
     margin: 0 auto;
     font-size: 18px;
 
-    #{&}__paragraph1{
-        font-weight:weight( bold ); //using function call
+    #{&}__paragraph1 {
+        font-weight: weight(bold); //using function call
     }
-    &:hover{
+
+    &:hover {
         color: pink;
     }
-    #{&}__paragraph2{
+
+    #{&}__paragraph2 {
         @extend .main__paragraph1;
 
-        &:hover{
-            color:$accent-color;
+        &:hover {
+            color: $accent-color;
         }
     }
-   @include mobile{
-       flex-direction: column;
-       background: $secondary-color;
-   } 
+
+    @include mobile {
+        flex-direction: column;
+        background: $secondary-color;
+    }
 }
+
 @mixin theme($light-theme:true) {
-    @if($light-theme){
+    @if($light-theme) {
         background: lighten($primary-color, 100%);
         color: darken($text-color, 100%);
     }
-    
+
 }
-.light{
-    @include theme($light-theme:true);// false or true and see changes
+
+.light {
+    @include theme($light-theme:true); // false or true and see changes
 }
-main{
+
+main {
     height: 100%;
     width: 100%;
 
-    .social-icons{
+    .social-icons {
         position: fixed;
         bottom: 1rem;
         left: 1rem;
 
-        a{
+        a {
             padding: 0.4rem;
             @include transition-ease;
-            &:hover{
-                color:$secondary-color;
+
+            &:hover {
+                color: $secondary-color;
             }
         }
     }
 }
-footer{
+
+footer {
     font-size: 1rem;
     position: fixed;
     bottom: 0rem;
     right: 1rem;
     text-align: right;
     padding: 1rem;
-color:set-tex-color($primary-color);
+    color: set-tex-color($primary-color);
 }
