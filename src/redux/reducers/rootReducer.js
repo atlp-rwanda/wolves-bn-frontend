@@ -9,6 +9,7 @@ const rootReducer = combineReducers({
   requests: requestsReducer,
   login: loginReducer,
   reset: passwordReducer,
+  requests: requestsReducer
 
 });
 
