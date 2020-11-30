@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
-import { login } from '../redux/actions/login';
-import InputField from './common/InputField';
-import Button from './common/Button';
-import logo from '../assets/undraw_travelers.svg';
+import { login } from '../../redux/actions/login';
+import InputField from '../common/InputField';
+import Button from '../common/Button';
+import logo from '../../assets/undraw_travelers.svg';
 import './login.scss';
+import facebookSvg from '../../assets/facebook.svg';
+import googleSvg from '../../assets/google.svg';
 
 const Login = () => {
   const newState = useSelector(state => state);
@@ -14,6 +16,20 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const dispatch = useDispatch();
+  const tokenParam = window.location.search;
+  if (tokenParam.length > 1) {
+    const token = tokenParam.split('=')[1];
+    localStorage.setItem('token', token);
+    window.location.replace('/dashboard');
+  }
+
+  const signInWithGoogle = () => {
+    window.location.replace(`${process.env.REACT_APP_URL}/auth/google`);
+  };
+
+  const signInWithFacebook = () => {
+    window.location.replace(`${process.env.REACT_APP_URL}/auth/facebook`);
+  };
 
   useEffect(() => {
     const { token, isLoggedIn } = newState.login;
@@ -71,8 +87,14 @@ const Login = () => {
                 <Button content='Login' />
             </div>
             </form>
+            <div>
+         <div className='social'>
+            <button className='social-btn google' onClick={signInWithGoogle} type='submit'><img src={googleSvg}/></button>
+            <button className='social-btn facebook' onClick={signInWithFacebook} type='submit'><img src={facebookSvg}/></button>
+         </div>
+      </div>
           </div>
-        </div>
+          </div>
       </div>
   );
 };

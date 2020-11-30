@@ -22,7 +22,7 @@ export const fetchRequests = () => async (dispatch) => {
   const token = localStorage.getItem('token');
 
   return axios
-    .get(process.env.REACT_APP_URL, {
+    .get(`${process.env.REACT_APP_URL}/api/trips`, {
       headers: {
         token,
       },

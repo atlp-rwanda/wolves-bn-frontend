@@ -111,6 +111,17 @@
   justify-content: flex-end !important;
 }
 
+.social-btn{
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+.social-btn img{
+  height: 50px;
+  width: 50px;
+  margin-left: 20px;
+}
+
 @media(max-width: 600px){
     .img-fluid{
       display: none;
@@ -132,4 +143,7 @@
       font-size: 20px;
       border: none;
     }
+
+
 }
+
