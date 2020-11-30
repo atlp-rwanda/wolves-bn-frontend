@@ -2,7 +2,7 @@ import React from 'react';
 import './inputField.scss';
 
 export default function InputField({
-  type, value, handleChange, name, label, placeholder
+  type, value, onChange, name, label, placeholder
 }) {
   return (
     <>
@@ -13,7 +13,7 @@ export default function InputField({
        type={type}
        value={value}
        placeholder={placeholder}
-       onChange={handleChange} />
+       onChange={onChange} />
     </div>
     </>
   );

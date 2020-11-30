@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { login } from '../../redux/actions/login';
 import InputField from '../common/InputField';
 import Button from '../common/Button';
@@ -11,11 +11,12 @@ import googleSvg from '../../assets/google.svg';
 
 const Login = () => {
   const newState = useSelector(state => state);
-  console.log(newState);
+  const dispatch = useDispatch();
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [submitted, setSubmitted] = useState(false);
-  const dispatch = useDispatch();
+
   const tokenParam = window.location.search;
   if (tokenParam.length > 1) {
     const token = tokenParam.split('=')[1];
@@ -89,6 +90,7 @@ const Login = () => {
             </form>
             <div>
          <div className='social'>
+            <h3 className='social-header'>Or sign in with: </h3>
             <button className='social-btn google' onClick={signInWithGoogle} type='submit'><img src={googleSvg}/></button>
             <button className='social-btn facebook' onClick={signInWithFacebook} type='submit'><img src={facebookSvg}/></button>
          </div>

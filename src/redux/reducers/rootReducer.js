@@ -4,13 +4,18 @@ import requestsReducer from './requests/requests';
 import loginReducer from './login.reducer';
 import registerReducer from './register';
 import profileReducer from './profile/profile';
+import passwordReducer from './password/password.reducer';
+import resetPassReducer from './password/reset.password.reducer';
 
 const rootReducer = combineReducers({
   login: loginReducer,
   requests: requestsReducer,
   signUp: registerReducer,
   setRole: roleReducer,
-  userProfile: profileReducer
+  userProfile: profileReducer,
+  findUser: passwordReducer,
+  resetPass: resetPassReducer
+
 });
 
 export default rootReducer;

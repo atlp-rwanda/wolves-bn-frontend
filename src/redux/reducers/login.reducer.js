@@ -9,7 +9,6 @@ const initialState = {
 
 const loginReducer = (state = initialState, action) => {
   const { type, payload } = action;
-  console.log(action);
   switch (type) {
     case fulfilled(LOGIN):
       return {
