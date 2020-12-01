@@ -33,8 +33,7 @@
     margin: 0 0.5rem;
     h3{
        color: #000000;
-       margin-bottom: 20px;
-       margin-top: -20px;
+       margin-bottom: 10px;
        font-family: poppins;
        
     }
@@ -122,31 +121,37 @@
 }
 
 .btn {
-    padding: 10px 20px;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 18px;
-    border: none;
-    outline: none;
-    link{
-        color: #fff;
-    }
+  background-color: #0029FA;
+  color: white;
+  font-size: 18px;
+  margin: 10px auto;
+  margin-left: 20px;
+  width: fit-content;
+  border: none;
+  border-radius: 5px;
+  button:hover{
+  background-color: #5C73F2;
+  cursor: pointer;
+  }
+  link{
+    color: white;
+    background: none;
+    
+  }
 }
+
 
 .btn--primary {
     background-color: #0029FA;
 }
 
 .userName {
-    font-weight: 800;
-    font-family: poppins;
-}
-.userName {
     margin-bottom: 40px;
+    font-family: poppins;
 
     span {
         display: inline-block;
-        font-weight: 100;
+        font-weight: 500;
         font-size: 24px;
         font-family: poppins;
         margin-bottom: 10px;
