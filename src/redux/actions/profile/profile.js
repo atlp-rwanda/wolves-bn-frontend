@@ -1,4 +1,5 @@
-/* eslint-disable import/prefer-default-export */
+/* eslint-disable no-restricted-syntax */
+/* eslint-disable guard-for-in */
 import axios from 'axios';
 import {
   VIEW_PROFILE_PENDING,
@@ -40,7 +41,7 @@ export const updateProfileError = (error) => ({
 export const updateProfileSuccess = (response) => ({
   type: UPDATE_PROFILE_SUCCESS,
   payload: {
-    data: response
+    response
   }
 });
 
@@ -51,12 +52,9 @@ export const viewProfile = () => dispatch => {
 
   axios.get('http://localhost:4000/api/profiles', { headers: { token } })
     .then(response => {
-      console.log('done');
-      console.log(response.data);
       dispatch(viewProfileSuccess(response.data));
     })
     .catch(err => {
-      console.log(err.response.data);
       dispatch(viewProfileError(err.response.data.error));
     });
 };
@@ -64,16 +62,9 @@ export const viewProfile = () => dispatch => {
 export const updateProfile = (data) => dispatch => {
   const token = localStorage.getItem('token');
   const formData = new FormData();
-  formData.append('photo', data.photo);
-  formData.append('firstName', data.firstName);
-  formData.append('lastName', data.lastName);
-  formData.append('email', data.email);
-  formData.append('address', data.address);
-  formData.append('gender', data.gender);
-  formData.append('currency', data.currency);
-  formData.append('department', data.department);
-
-  console.log('formData', formData);
+  for (const field in data) {
+    formData.append(field, data[field]);
+  }
 
   axios.put('http://localhost:4000/api/profiles', formData, {
     headers: {
@@ -82,11 +73,9 @@ export const updateProfile = (data) => dispatch => {
     }
   })
     .then((response) => {
-      console.log(response.data);
-      dispatch(updateProfileSuccess());
+      dispatch(updateProfileSuccess(response.data.message));
     })
     .catch(err => {
-      console.log(err.response.data);
-      dispatch(updateProfileError(err.response.data.error));
+      dispatch(updateProfileError(err.response.data));
     });
 };

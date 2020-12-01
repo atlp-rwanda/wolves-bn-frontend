@@ -2,12 +2,14 @@ import {
   VIEW_PROFILE_PENDING,
   VIEW_PROFILE_SUCCESS,
   VIEW_PROFILE_ERROR,
-  UPDATE_PROFILE_SUCCESS
+  UPDATE_PROFILE_SUCCESS,
+  UPDATE_PROFILE_ERROR
 } from '../../actions/actionTypes';
 
 const initialState = {
   user: {},
   viewProfileError: '',
+  updateProfileError: '',
   res: ''
 };
 
@@ -39,7 +41,13 @@ const reducer = (state = initialState, action) => {
     case UPDATE_PROFILE_SUCCESS:
       return {
         ...state,
-        res: { payload }
+        res: payload.response
+      };
+
+    case UPDATE_PROFILE_ERROR:
+      return {
+        ...state,
+        updateProfileError: payload.error
       };
 
     default: return state;
