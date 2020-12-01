@@ -1,5 +1,4 @@
 export const LOGIN = 'LOGIN';
-
 // get trips requests made
 export const FETCH_TRIPS_START = 'FETCH_TRIPS_START';
 export const FETCH_TRIPS_SUCCESS = 'FETCH_TRIPS_SUCCESS';
@@ -12,3 +11,6 @@ export const CLEAR_MESSAGE = 'CLEAR_MESSAGE';
 
 export const FIND_USER = 'FIND_USER';
 export const RESET_PASSWORD = 'RESET_PASSWORD';
+export const REGISTER_START = 'REGISTER_START';
+export const REGISTER_SUCCESS = 'REGISTER_SUCCESS';
+export const REGISTER_FAIL = 'REGISTER_FAIL';

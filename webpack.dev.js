@@ -10,6 +10,7 @@ module.exports = {
   mode: 'development',
   entry: './src/index.js',
   output: {
+    publicPath: '/',
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/'
@@ -17,6 +18,7 @@ module.exports = {
   devtool: 'inline-source-map',
   devServer: {
     contentBase: './dist',
+    historyApiFallback: true,
     hot: true,
     historyApiFallback: true,
   },
