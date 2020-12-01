@@ -5,13 +5,13 @@ import Navbar from './components/Navbar/Navbar';
 import Welcome from './components/Home/Welcome';
 import store from './redux/store';
 import Nav from './components/nav/nav';
-// import Login from './components/login/login';
+import Login from './components/login/login';
 import Dashboard from './components/dashboard/dashboard';
+import Signup from './components/SignUp/signUp';
 import './styles/main.scss';
 import './styles/scss/main.scss';
 import Requests from './components/Requests/Requests.jsx';
 import ForgotPassword from './components/ForgotPassword';
-import Login from './components/login/Login';
 import Profile from './components/Profile';
 
 class App extends Component {
@@ -26,13 +26,15 @@ class App extends Component {
             <Route path="/" exact component={Welcome} />
             <Route exact path="/dashboard" component={Dashboard}/>
             <Route path="/login" exact component={Login} />
+            <Route path="/" exact component={Welcome} />
+              <Route path="/signup" exact component={Signup} />
+            <Route path="/login" exact component={Login} />
             <Route path="/profile" component={Profile} />
-            <Route path='/forgotPassword'component={ForgotPassword} />
+            <Route path='/forgotpassword' component={ForgotPassword} />
           </Switch>
         </div>
      </div>
     );
   }
 }
-
-export default connect(null)(App);
+export default App;
