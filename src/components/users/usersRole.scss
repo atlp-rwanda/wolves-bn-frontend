@@ -1,58 +1,46 @@
-@import 'config';
-@import 'resets';
+@import '../../styles/scss/config';
+@import '../../styles/scss/resets';
 
 body {
-    height: 100vh;
-    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1;
+    text-align: center;
 }
 .text-secondary {
     color: $secondary-color;
-}
-input{
-    display: inline-block;
-    color: black;
-    width: 250px;
-    height: 40px;
-    border-radius: 10px;
-    font-size: $text-color;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-button{
-    text-align: center;
-    color: $text-color;
-    width: 100px;
-    height: 40px;
-    border-radius: 10px;
-    font-size: $text-color;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: blue;
 }
 div{
     padding-left: 1%;
     align-items: center;
 }
 table {
-    border-collapse: collapse;
-    width: 70%;
+    font-size: 18px;
+    margin-left: 100px;
+    height: 60vh;
+    width: 80%;
+    text-align: center;
   }
-  
-   td {
-    text-align: left;
-    padding: 8px;
-  }
+ td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 5px solid #ddd;
+  border-radius: 6px 6px 6px 6px ;
+}
   th{
     background-color:$th-color;
     height: 35px;
     color: white;
   }
+  select{
+    font-size: 18px;
+      height: 30px;
+      border: 0px;
+  }
   
-  tr:nth-child(even) {background-color: #ffffff;;}
-  tr:nth-child(odd) {background-color: #ffffff;;}
-h1,h2,h3{
+h2{
     font-weight: 400;
     text-align: center;
-    color: rgb(7, 7, 7);
+
+    color: green;
+    font: bold;
 }
 a{
     color:set-tex-color($primary-color);
@@ -63,10 +51,11 @@ a{
 }
 
 header {
-    position: fixed;
-    z-index: 2;
-    width: 100%;
-    padding: 1rem;
+    background-color: #0029FA;
+    padding: 20px 30px;
+    color: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 @function weight($weight-name) {
