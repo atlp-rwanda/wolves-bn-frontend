@@ -9,12 +9,17 @@ import Dashboard from './components/dashboard/dashboard';
 import Signup from './components/auth/SignUp/signUp';
 import Profile from './components/auth/Profile/Profile.jsx';
 import UpdateProfile from './components/auth/Profile/UpdateProfile.jsx';
+import Accommoadtion from './components/accommodation/Accommodation';
+import AccommoadtionCreate from './components/accommodation/AccommodationCreate';
+import AccommodationUpdate from './components/accommodation/AccommmodationUpdate';
+import AccomodationView from './components/accommodation/AccommodationView';
 import Requests from './components/Requests/Requests.jsx';
 import ForgotPassword from './components/auth/password/ForgotPassword';
 import userList from './components/users/usersList.jsx';
 import ResetPassword from './components/auth/password/ResetPassword';
 import './App.scss';
 import './styles/scss/main.scss';
+import facilities from './services/facilities';
 
 // eslint-disable-next-line no-shadow
 function PrivateRoute({ component: Component, authed, ...rest }) {
@@ -46,8 +51,14 @@ class App extends Component {
             <Route path="/login" exact component={Login} />
             <Route path="/profile" component={Profile} />
             <Route path='/forgotpassword'component={ForgotPassword} />
+            <Route path="/facilities" exact component={facilities} />
             <Route path="/userlist" component={userList} />
             <Route path='/resetpassword' exact component={ResetPassword} />
+            <Route path="/accommodation/:id" component={AccomodationView} />
+            <Route path="/accommodation" component={Accommoadtion} />
+            <Route path="/accommodationCreate" component={AccommoadtionCreate} />
+            <Route path="/accommodationUpdate" component={AccommodationUpdate} />
+            <Route path='/forgotpassword' component={ForgotPassword} />
 
             <PrivateRoute authed={isAuth} path='/profile' component={Profile} />
             <PrivateRoute authed={isAuth} path='/updateprofile' component={UpdateProfile} />
