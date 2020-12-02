@@ -56,6 +56,7 @@ export const viewProfile = () => dispatch => {
     })
     .catch(err => {
       dispatch(viewProfileError(err.response.data.error));
+      localStorage.removeItem('token');
     });
 };
 

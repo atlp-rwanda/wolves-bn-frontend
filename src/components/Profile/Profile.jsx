@@ -20,7 +20,7 @@ export class Profile extends Component {
           <div className="userIcon">
               <img src={profileimage} alt="user Icon"/>
           </div>
-          <button className='btn btn--primary' ><Link to='/updateprofile'>Edit</Link></button>
+          <Link to='/updateprofile'><button className='btn btn--primary' >Edit</button></Link>
           <div className="user" >
           <div className="userName">
             {lastName && <span>{lastName}</span>}

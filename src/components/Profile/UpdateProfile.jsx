@@ -35,6 +35,11 @@ export class UpdateProfile extends Component {
 
   componentWillReceiveProps(nextProps) {
     this.setState(nextProps.user);
+    console.log('nextProps.res', nextProps.res);
+    console.log('nextProps', nextProps);
+    if (nextProps.res) {
+      this.props.history.push('/profile');
+    }
   }
 
   onChange(e) {
@@ -71,8 +76,8 @@ export class UpdateProfile extends Component {
     } = this.state;
     return (
         <div className='container'>
-          <div className='row content'>
-            <div className='col-md-6'>
+          <div className='my content'>
+            <div className='mmmm'>
             <h3> <b>Update your profile information </b></h3>
             {this.props.res && <h4>{this.props.res}</h4>}
             <form action='#' onSubmit={this.onSubmit}>
@@ -160,7 +165,7 @@ export class UpdateProfile extends Component {
             <Button content='Update' />
           </form>
           </div>
-          <div className='col-md-6 mb-3'>
+          <div className='image'>
               <img src={profileim} alt='' className='img-fluid' />
           </div>
         </div>

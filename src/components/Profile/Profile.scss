@@ -28,8 +28,8 @@
   .img-container{
     width: 50%;
   }
-  .col-md-6{
-    width: 90%;
+  .mmmm{
+    width: 100%;
     margin: 0 0.5rem;
     h3{
        color: #000000;
@@ -51,13 +51,25 @@
 
     }
   }
+    form{
+    min-width: 100%;
+    box-shadow: 2px 2px 5px #2C166F;
+    padding:20px;
+    margin: 0;
+    
+  }
+//   form{
+//     width: 50%;
+//     padding: 50px;
+//     box-shadow: 2px 2px 5px #2C166F;
+// }
   .content{
     width: 90vw;
     background-color: white;
     display: flex;
     justify-content: space-around;
     padding: 4rem 1rem;
-    box-shadow: 0 0 5px 5px rgba(0,0,0, .05);
+    // box-shadow: 0 0 5px 5px rgba(0,0,0, .05);
   }
   .form-control{
     display: block;
@@ -103,8 +115,18 @@
         position: absolute;
         top: 10px;
         right: 20px;
+        outline: none;
+        Link{
+          color:blue;
+          background: none;
+          
+        }
     }
+
 }
+
+
+
 
 .userIcon {
     position: absolute;
@@ -132,11 +154,6 @@
   button:hover{
   background-color: #5C73F2;
   cursor: pointer;
-  }
-  link{
-    color: white;
-    background: none;
-    
   }
 }
 

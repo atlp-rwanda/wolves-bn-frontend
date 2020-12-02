@@ -7,12 +7,10 @@ import profileReducer from './profile/profile';
 
 const rootReducer = combineReducers({
   login: loginReducer,
-  reset: passwordReducer,
-  profile: profileReducer,
   requests: requestsReducer,
   signUp: registerReducer,
   setRole: roleReducer,
-  requests: requestsReducer,
+  userProfile: profileReducer
 });
 
 export default rootReducer;
