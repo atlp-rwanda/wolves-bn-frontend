@@ -18,6 +18,7 @@
 	},
 	"plugins": ["react"],
 	"rules": {
+    "import/no-named-as-default": 0,
 		"linebreak-style": ["off", "windows"],
 		"camelcase": "off",
 		"no-tabs": 0,

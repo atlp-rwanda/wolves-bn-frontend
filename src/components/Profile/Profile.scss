@@ -1,0 +1,199 @@
+.container{
+    width: 60%;
+    margin: auto;
+    height: auto;
+    padding: 0;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(#000, 0.2);
+
+  }
+  .profile{
+    background-image: url(../../assets/images/bg.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    padding: 50px;
+    align-content: space-between;
+  } 
+
+  .img-fluid{
+    width: 100%;
+    height: 100%;
+    padding: 0 10%;
+  }
+  .img-container{
+    width: 50%;
+  }
+  .mmmm{
+    width: 100%;
+    margin: 0 0.5rem;
+    h3{
+       color: #000000;
+       margin-bottom: 10px;
+       font-family: poppins;
+       
+    }
+    h5{
+      color: red;
+      padding: 10px auto;
+      font-family: poppins;
+
+    }
+    h4{
+      color:green;
+      margin-bottom: 10px;
+      margin-top: -10px;
+      font-family: poppins;
+
+    }
+  }
+    form{
+    min-width: 100%;
+    box-shadow: 2px 2px 5px #2C166F;
+    padding:20px;
+    margin: 0;
+    
+  }
+//   form{
+//     width: 50%;
+//     padding: 50px;
+//     box-shadow: 2px 2px 5px #2C166F;
+// }
+  .content{
+    width: 90vw;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 4rem 1rem;
+    // box-shadow: 0 0 5px 5px rgba(0,0,0, .05);
+  }
+  .form-control{
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    border-color: #2196F3 !important;
+    border-style: solid !important;
+    border-width: 0 0 1px 0 !important;
+    padding: 0px !important;
+    color: #495057;
+    height: auto;
+    border-radius: 0;
+    background-color: white;
+    background-clip: padding-box;
+  }
+  
+  .form-control:focus{
+    color: #495057;
+    outline: none;
+    border-color: white;
+    background-color: white;
+    box-shadow: none; 
+  }
+  .form-control input{
+    width: 70%;
+    padding: auto;
+  }
+ 
+.infoCard {
+    position: relative;
+    width: 50%;
+    margin: 120px auto;
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(#000, 0.2);
+    padding: 60px 30px;
+    text-align: center;
+    border-radius: 10px;
+    top: 60px;
+
+    button {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        outline: none;
+        Link{
+          color:blue;
+          background: none;
+          
+        }
+    }
+
+}
+
+
+
+
+.userIcon {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+
+    img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+}
+
+.btn {
+  background-color: #0029FA;
+  color: white;
+  font-size: 18px;
+  margin: 10px auto;
+  margin-left: 20px;
+  width: fit-content;
+  border: none;
+  border-radius: 5px;
+  button:hover{
+  background-color: #5C73F2;
+  cursor: pointer;
+  }
+}
+
+
+.btn--primary {
+    background-color: #0029FA;
+}
+
+.userName {
+    margin-bottom: 40px;
+    font-family: poppins;
+
+    span {
+        display: inline-block;
+        font-weight: 500;
+        font-size: 24px;
+        font-family: poppins;
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+
+    p {
+        font-weight: 100;
+        
+    }
+}
+
+.moreInfo {
+    span {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-family: poppins;
+        margin-left: 10px;
+    }
+
+    .role {
+        color: #000;
+    }
+}
+
+.error {
+    color: red;
+}
