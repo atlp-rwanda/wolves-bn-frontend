@@ -2,17 +2,18 @@ import React from 'react';
 import './inputField.scss';
 
 export default function InputField({
-  type, value, onChange, name, label
+  type, value, handleChange, name, label, placeholder
 }) {
   return (
     <>
     <div className='inputDiv'>
-  <label>{label}</label>
+      <label>{label}</label>
       <input
        name={name}
        type={type}
        value={value}
-       onChange={onChange} />
+       placeholder={placeholder}
+       onChange={handleChange} />
     </div>
     </>
   );

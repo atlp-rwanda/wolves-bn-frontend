@@ -1,13 +1,14 @@
 .btn{
-  padding: 10px 40px;
-  background-color: #0029FA;
-  color: white;
-  font-size: 18px;
-  border: none;
-  border-radius: 10px;
-}
-
-button:hover{
-  background-color: #5C73F2;
-  cursor: pointer;
-}
+    background-color: #0029FA;
+    color: white;
+    font-size: 18px;
+    margin: 10px auto;
+    margin-left: 20px;
+    width: fit-content;
+    border: none;
+    border-radius: 5px;
+  }
+  button:hover{
+    background-color: #5C73F2;
+    cursor: pointer;
+  }
