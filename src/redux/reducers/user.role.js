@@ -2,7 +2,7 @@ import {
   LOAD_USER,
   USER_ROLE_CHANGED,
   GET_LIST
-} from '../actions/constants';
+} from '../actions/actionTypes';
 import { fulfilled, rejected } from '../../utils/action.utils';
 
 const initialState = {

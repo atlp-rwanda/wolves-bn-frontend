@@ -2,8 +2,7 @@ $primary-color:#ffffff;
 $secondary-color:green;
 $accent-color:#ff652f;
 $text-color:#fff;
-//$font-weights:("regular":400;
-$th-color:blue;
+$th-color:#2196F3;
 $font-weights:(
     "regular":400,
     "medium":500,
@@ -13,6 +12,15 @@ div{
     padding-left: 1%;
     align-items: center;
 }
+
+
+body {
+    text-align: center;
+}
+.text-secondary {
+    color: $secondary-color;
+}
+
 table {
     font-size: 18px;
     margin-left: 100px;
@@ -44,3 +52,20 @@ h2{
     color: green;
     font: bold;
 }
+a{
+    color: #fff;
+    text-decoration: none;
+}
+.text-secondary{
+    color:$secondary-color;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px 30px;
+    color: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+

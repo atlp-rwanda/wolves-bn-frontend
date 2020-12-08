@@ -7,7 +7,7 @@ import renderer from 'react-test-renderer';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
-import Login from '../../components/Login';
+import Login from '../../components/auth/login/login';
 
 Enzyme.configure({ adapter: new Adapter() });
 

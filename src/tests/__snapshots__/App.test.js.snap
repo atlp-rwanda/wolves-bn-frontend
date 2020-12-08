@@ -1,43 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Simple component test should render with initial state 1`] = `
-<div
-  className="App"
->
+<div>
   <div
-    className="nav"
+    className="App"
   >
-    <h1>
-       Logo
-    </h1>
-    <ul
-      className="nav_links"
+    <div
+      className="nav"
     >
-      <a
-        href="/home"
-        onClick={[Function]}
+      <h1>
+         Logo
+      </h1>
+      <ul
+        className="nav_links"
       >
-        <li>
-          Home
-        </li>
-      </a>
-      <a
-        href="/profile"
-        onClick={[Function]}
-      >
-        <li>
-          Profile
-        </li>
-      </a>
-      <a
-        href="/login"
-        onClick={[Function]}
-      >
-        <li>
-          Login
-        </li>
-      </a>
-    </ul>
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          <li>
+            Home
+          </li>
+        </a>
+        <a
+          href="/requests"
+          onClick={[Function]}
+        >
+          <li>
+            Requests
+          </li>
+        </a>
+        <a
+          href="/userlist"
+          onClick={[Function]}
+        >
+          <li>
+            Setting
+          </li>
+        </a>
+        <a
+          href="/login"
+          onClick={[Function]}
+        >
+          <li>
+            Login
+          </li>
+        </a>
+      </ul>
+    </div>
+    <h1>
+      Welcome
+    </h1>
   </div>
 </div>
 `;

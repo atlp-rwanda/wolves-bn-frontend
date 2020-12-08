@@ -5,7 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import promise from 'redux-promise-middleware';
 import thunk from 'redux-thunk';
-import Profile from '../../components/Profile';
+import Profile from '../../components/auth/Profile/Profile.jsx';
 
 const middlewares = [thunk, promise];
 const mockStore = configureMockStore(middlewares);

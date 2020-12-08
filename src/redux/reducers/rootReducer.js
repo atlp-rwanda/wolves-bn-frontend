@@ -6,6 +6,7 @@ import registerReducer from './register';
 import profileReducer from './profile/profile';
 import passwordReducer from './password/password.reducer';
 import resetPassReducer from './password/reset.password.reducer';
+import destination from './destination.reducer';
 
 const rootReducer = combineReducers({
   login: loginReducer,
@@ -14,8 +15,8 @@ const rootReducer = combineReducers({
   setRole: roleReducer,
   userProfile: profileReducer,
   findUser: passwordReducer,
-  resetPass: resetPassReducer
-
+  resetPass: resetPassReducer,
+  topDestination: destination
 });
 
 export default rootReducer;

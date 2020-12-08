@@ -21,20 +21,6 @@ class SearchTrips {
       },
     });
     return response;
-    // .then((response) => response)
-    // .catch((error) => {
-    //   // let errorMessage;
-    //   // if (error.response) {
-    //   //   errorMessage = error.response.data.Error;
-    //   //   // console.log('error 1:', errorMessage);
-    //   // } else if (error.request) {
-    //   //   errorMessage = error.response.request;
-    //   //   console.log('error 2:', error.request);
-    //   // } else {
-    //   //   // console.log('error 3:', error.message);
-    //   //   errorMessage = error.message;
-    //   // }
-    // });
   }
 
   autoSearchTripByDestination(destination) {
@@ -47,20 +33,6 @@ class SearchTrips {
     }
     );
     return response;
-    // .then((response) => response)
-    // .catch((error) => {
-    //   // let errorMessage;
-    //   // if (error.response) {
-    //   //   // errorMessage = error.response.data.Error;
-    //   //   console.log('error 1:', errorMessage);
-    //   // } else if (error.request) {
-    //   //   errorMessage = error.response.request;
-    //   //   // console.log('error 2:', error.request);
-    //   // } else {
-    //   //   // console.log('error 3:', error.message);
-    //   //   errorMessage = error.message;
-    //   // }
-    // });
   }
 }
 

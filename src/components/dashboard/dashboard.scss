@@ -1,0 +1,113 @@
+.dashboard{
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar{
+  background-color: #fff;
+  width: 20%;
+  height: 92vh;
+  border-right: 1px solid #000;
+}
+
+.user-options{
+  list-style: none;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-option{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 12px;
+}
+
+.user-options h3{
+  font-size: 24px;
+  display: flex;
+  justify-content: flex-start;
+  margin: 40px 10px 10px 10px;
+  font-weight: 500;
+}
+
+.user-option img{
+  width: 22px;
+  height: 22px;
+  margin: 0 20px 0 0;
+}
+
+.user-option a{
+  display: flex;
+  align-items: center;
+}
+
+.user-option h4{
+  font-size: 18px;
+  color: #000;
+  font-weight: 300;
+}
+
+.user-options :nth-child(5){
+  margin-bottom: 0%;
+}
+
+.main-body{
+  color: #000;
+  align-items: flex-start;
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.trip-stats{
+  width: 25%;
+  margin: 0 15px 30px 0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: 0 0 5px 5px rgba(0,0,0, .05);
+  border-radius: 10px;
+}
+
+.accomPic img{
+  height: 25vh;
+  width: 20vw;
+  padding: 0 15px 15px 15px;
+}
+.accHeader{
+  padding: 15px 0;
+}
+.accHeader h2{
+  font-size: 24px;
+  color: #2196F3;
+}
+
+.main-body h4{
+  color: #000;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.destination span{
+  color: #2196F3;
+  font-size: 20px;
+}
+
+.profile-pic{
+  display: flex;
+  align-items: center !important;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.profile-pic img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 5px;
+  align-items: center;
+}
