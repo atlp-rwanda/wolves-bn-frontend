@@ -6,9 +6,19 @@ class AuthService {
     return response;
   }
 
-  async findUserService(email) {
-    const response = await axios.post('/api/users/forgotPassword', { email });
-    return response.data;
+  findUserService(email) {
+    const response = axios.post('/api/users/forgotPassword', { email });
+    return response;
+  }
+
+  resetPassword(newPassword) {
+    const tokenParam = window.location.search;
+    if (tokenParam.length > 1) {
+      const resetLinkToken = tokenParam.split('=')[1];
+      const resettingUrl = `api/users/resetPassword/${resetLinkToken}`;
+      const response = axios.post(resettingUrl, { newPassword });
+      return response;
+    }
   }
 }
 

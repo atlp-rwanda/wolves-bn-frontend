@@ -116,10 +116,18 @@
   border: transparent;
   cursor: pointer;
 }
+.social{
+  display: flex;
+  align-items: center;
+}
 .social-btn img{
-  height: 50px;
-  width: 50px;
+  height: 32px;
+  width: 32px;
   margin-left: 20px;
+}
+
+.social-header{
+  color: #000;
 }
 
 @media(max-width: 600px){
