@@ -10,12 +10,12 @@ const Request = ({
     travel_date,
     return_date,
     travel_reason,
-    place_to_stay,
-    request_status,
+    // place_to_stay,
+    // request_status,
     requester,
   },
 }) => {
-  const statusClass = request_status === 'pending' ? 'pending' : 'approved';
+  // const statusClass = request_status === 'pending' ? 'pending' : 'approved';
 
   let requesterField = '';
 
@@ -31,8 +31,8 @@ const Request = ({
         <li>{travel_date.split('T')[0]}</li>
         <li>{return_date.split('T')[0]}</li>
         <li>{travel_reason}</li>
-        <li>{place_to_stay.name}</li>
-        <li className={statusClass}>{request_status}</li>
+        {/* <li>{place_to_stay.name}</li> */}
+        {/* <li className={statusClass}>{request_status}</li> */}
       </ul>
     </div>
   );

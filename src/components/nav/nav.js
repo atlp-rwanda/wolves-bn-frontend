@@ -20,6 +20,10 @@ const Nav = ({ isLoggedIn }) => <div className= "nav">
                         <li>Setting</li>
                 </Link>
                 <br/>
+                <Link to="/Requests">
+                        <li>Requests</li>
+                </Link>
+                <br/>
               </ul>
         </div>;
 const mapStateToProps = state => ({

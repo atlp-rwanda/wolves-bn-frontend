@@ -5,7 +5,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { userList, changeRole } from '../../redux/actions/userRole';
-// import './usersRole.scss';
+import './usersRole.scss';
 
 class UsersList extends Component {
   componentDidMount() {

@@ -5,7 +5,7 @@ import THeader from './table-header.jsx';
 import Spinner from '../common/Spinner/Spinner';
 
 const RequestsTable = ({ requests, role, loading }) => {
-  let trips = <h1>No trips Created yet</h1>;
+  let trips = <h1 className="error">No data found</h1>;
   if (requests.length > 0) {
     trips = (
       <React.Fragment>

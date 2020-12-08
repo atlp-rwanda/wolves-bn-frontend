@@ -1,12 +1,14 @@
-@import '../../styles/scss/config';
-@import '../../styles/scss/resets';
-
-body {
-    text-align: center;
-}
-.text-secondary {
-    color: $secondary-color;
-}
+$primary-color:#ffffff;
+$secondary-color:green;
+$accent-color:#ff652f;
+$text-color:#fff;
+//$font-weights:("regular":400;
+$th-color:blue;
+$font-weights:(
+    "regular":400,
+    "medium":500,
+    "bold":700);
+$mobile:800px;
 div{
     padding-left: 1%;
     align-items: center;
@@ -14,7 +16,7 @@ div{
 table {
     font-size: 18px;
     margin-left: 100px;
-    height: 60vh;
+    height:auto;
     width: 80%;
     text-align: center;
   }
@@ -41,110 +43,4 @@ h2{
 
     color: green;
     font: bold;
-}
-a{
-    color:set-tex-color($primary-color);
-    text-decoration: none;
-}
-.text-secondary{
-    color:$secondary-color;
-}
-
-header {
-    background-color: #0029FA;
-    padding: 20px 30px;
-    color: #fff;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-@function weight($weight-name) {
-    @return map-get($font-weights, $weight-name);
-}
-
-@mixin flexCenter($direction) {
-    display: flex;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: $direction;
-
-}
-
-@mixin mobile {
-    @media(max-width:$mobile) {
-        @content;
-
-    }
-
-}
-
-.main {
-    @include flexCenter(row); //use row or column
-    width: 90%-10%;
-    margin: 0 auto;
-    font-size: 18px;
-
-    #{&}__paragraph1 {
-        font-weight: weight(bold); //using function call
-    }
-
-    &:hover {
-        color: pink;
-    }
-
-    #{&}__paragraph2 {
-        @extend .main__paragraph1;
-
-        &:hover {
-            color: $accent-color;
-        }
-    }
-
-    @include mobile {
-        flex-direction: column;
-        background: $secondary-color;
-    }
-}
-
-@mixin theme($light-theme:true) {
-    @if($light-theme) {
-        background: lighten($primary-color, 100%);
-        color: darken($text-color, 100%);
-    }
-
-}
-
-.light {
-    @include theme($light-theme:true); // false or true and see changes
-}
-
-main {
-    height: 100%;
-    width: 100%;
-
-    .social-icons {
-        position: fixed;
-        bottom: 1rem;
-        left: 1rem;
-
-        a {
-            padding: 0.4rem;
-            @include transition-ease;
-
-            &:hover {
-                color: $secondary-color;
-            }
-        }
-    }
-}
-
-footer {
-    font-size: 1rem;
-    position: fixed;
-    bottom: 0rem;
-    right: 1rem;
-    text-align: right;
-    padding: 1rem;
-    color: set-tex-color($primary-color);
 }
