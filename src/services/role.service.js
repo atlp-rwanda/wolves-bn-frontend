@@ -8,7 +8,7 @@ class RoleService {
         token: localStorage.getItem('token')
       }
     };
-    const response = axios.patch('/api/users/settings', { email, role }, config);
+    const response = axios.patch(`${process.env.REACT_APP_URL}/api/users/settings`, { email, role }, config);
     return response;
   }
 }

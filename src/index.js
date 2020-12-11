@@ -7,7 +7,6 @@ import store from './redux/store';
 import App from './App';
 
 axios.defaults.baseURL = process.env.REACT_APP_URL;
-
 ReactDOM.render(
 <BrowserRouter>
   <Provider store={store}>

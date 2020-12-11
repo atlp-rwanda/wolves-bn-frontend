@@ -13,8 +13,7 @@ import Requests from './components/Requests/Requests.jsx';
 import ForgotPassword from './components/password/ForgotPassword';
 import userList from './components/users/usersList.jsx';
 import ResetPassword from './components/password/ResetPassword';
-import './styles/main.scss';
-import './styles/scss/main.scss';
+import './App.scss';
 
 // eslint-disable-next-line no-shadow
 function PrivateRoute({ component: Component, authed, ...rest }) {

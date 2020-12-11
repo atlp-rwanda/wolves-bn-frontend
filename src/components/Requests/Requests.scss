@@ -1,6 +1,7 @@
 .requests {
     padding: 30px 40px;
-
+    width: 190vh;
+ 
     ul {
         list-style: none;
         display: flex;
@@ -27,6 +28,7 @@
 
     &__table {
         height: 90vh;
+        width: 180vh;
         text-align: center;
 
         &--header {
@@ -42,14 +44,52 @@
         }
     }
 }
-
+.headers{
+    background-color:#0029FA;
+}
+.select {
+   // appearance: none;
+    background-color:#0029FA;
+    border: none;
+    padding: 0em 1em 0 0;
+    margin-left: 25px;
+    font-family: inherit;
+    font-size: 1.5rem;
+    cursor: inherit;
+    line-height: inherit;
+    width: 50vh;
+    height: 40px;
+   // text-shadow: 2px 2px;
+  }
+ input {
+    appearance: none;
+    background-color: transparent;
+    padding: 2em 1em 0 0;
+    margin: 0;
+    font-family: inherit;
+    font-size: 1.5rem;
+    cursor: inherit;
+    line-height: inherit;
+    width: 167vh;
+   // text-shadow: 2px 2px;
+  }
+  .message {
+   //background-color: green;
+   color:green;
+    width: 40%;
+    margin: 20px auto;
+    padding: 10px 15px;
+    font-size: 15px;
+    text-align: center;
+    text-transform: uppercase;
+}
 .error {
     background-color: #D0454C;
     color: #fff;
     width: 40%;
     margin: 20px auto;
     padding: 10px 15px;
-    font-size: 30px;
+    font-size: 15px;
     text-align: center;
     text-transform: uppercase;
 }

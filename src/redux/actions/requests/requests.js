@@ -1,6 +1,9 @@
 /* eslint-disable import/prefer-default-export */
 import axios from 'axios';
-import { FETCH_TRIPS_FAIL, FETCH_TRIPS_SUCCESS, FETCH_TRIPS_START } from '../actionTypes';
+import {
+  FETCH_TRIPS_FAIL, FETCH_TRIPS_SUCCESS, FETCH_TRIPS_START, GET_TRIPS_AUTOSEARCH
+} from '../actionTypes';
+import SearchTrips from '../../../services/search.trips';
 
 export const fetchTripStart = () => ({
   type: FETCH_TRIPS_START,
@@ -22,7 +25,7 @@ export const fetchRequests = () => async (dispatch) => {
   const token = localStorage.getItem('token');
 
   return axios
-    .get(`${process.env.REACT_APP_URL}/api/trips`, {
+    .get('/api/trips', {
       headers: {
         token,
       },
@@ -32,5 +35,16 @@ export const fetchRequests = () => async (dispatch) => {
       dispatch(fetchTripSuccess(info, role));
       return response;
     })
-    .catch((err) => dispatch(fetchTripFail(err.response.data.error)));
+    .catch((err) => dispatch(fetchTripFail(err.response.data.error))
+    );
 };
+export const autoSearchTripsList = (departure) => ({
+  type: GET_TRIPS_AUTOSEARCH,
+  payload: SearchTrips.autoSearchTrip(departure)
+
+});
+export const autoSearchTrips_Destination = (destination) => ({
+  type: GET_TRIPS_AUTOSEARCH,
+  payload: SearchTrips.autoSearchTripByDestination(destination)
+
+});
