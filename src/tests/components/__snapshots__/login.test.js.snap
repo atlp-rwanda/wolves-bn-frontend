@@ -2,7 +2,7 @@
 
 exports[`Login component should render with initial state 1`] = `
 <div
-  className="container"
+  className="loginPage"
 >
   <div
     className="row content"
@@ -103,6 +103,35 @@ exports[`Login component should render with initial state 1`] = `
           </button>
         </div>
       </form>
+      <div>
+        <div
+          className="social"
+        >
+          <h3
+            className="social-header"
+          >
+            Or sign in with: 
+          </h3>
+          <button
+            className="social-btn google"
+            onClick={[Function]}
+            type="submit"
+          >
+            <img
+              src="test-file-stub"
+            />
+          </button>
+          <button
+            className="social-btn facebook"
+            onClick={[Function]}
+            type="submit"
+          >
+            <img
+              src="test-file-stub"
+            />
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

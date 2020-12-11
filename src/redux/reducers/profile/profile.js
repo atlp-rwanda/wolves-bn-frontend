@@ -24,7 +24,7 @@ const reducer = (state = initialState, action) => {
       };
 
     case VIEW_PROFILE_SUCCESS:
-
+      console.log(payload.user.firstName);
       return {
         ...state,
         user: payload.user

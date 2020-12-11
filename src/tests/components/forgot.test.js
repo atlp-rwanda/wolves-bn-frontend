@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
-import ForgotPassword from '../../components/ForgotPassword';
+import ForgotPassword from '../../components/auth/password/ForgotPassword';
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);

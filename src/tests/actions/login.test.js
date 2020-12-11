@@ -1,7 +1,7 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import promise from 'redux-promise-middleware';
-import { login } from '../../redux/actions/login';
+import { login } from '../../redux/actions/auth/login';
 import { LOGIN } from '../../redux/actions/actionTypes';
 import AuthService from '../../services/auth.service';
 

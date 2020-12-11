@@ -1,0 +1,42 @@
+body {
+    height: 100vh;
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1;
+}
+
+.text-secondary {
+    color: #2196F3;
+}
+
+button{
+    text-align: center;
+    color: #fff;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #2196F3;
+}
+
+  
+
+h1,h2,h3{
+    font-weight: 400;
+    text-align: center;
+    color: rgb(7, 7, 7);
+}
+a{
+    color:#fff;
+    text-decoration: none;
+}
+.text-secondary{
+    color: #2196F3;
+}
+
+header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    padding: 1rem;
+}
+

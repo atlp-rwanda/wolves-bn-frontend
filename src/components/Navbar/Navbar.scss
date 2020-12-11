@@ -1,14 +1,16 @@
 .nav {
     display: flex;
-    //background-color: lightblue;
-    height: 12vh;
+    background-color: #2196F3;
+    height: 8vh;
     justify-content: space-around;
     align-items: center;
 }
- .nav_links {
+ 
+.nav_links {
     list-style: none;
     display: flex;
     width: 50%;
+    font-size: 20px;
     justify-content: space-around;
-
+    background-color: #2196F3;
 }

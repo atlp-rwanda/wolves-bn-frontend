@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.loginPage{
+  width: 70%;
+  margin: auto;
+  height: 100vh;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.img-fluid{
+  width: 100%;
+  padding: 0 10%;
+}
+
+.img-container{
+  width: 50%;
+}
+
+.col-md-6{
+  width: 90%;
+  margin: 0 4rem;
+}
+
+.content{
+  width: 90vw;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 4rem 2rem;
+  box-shadow: 0 0 5px 5px rgba(0,0,0, .05);
+}
+
+.signin-text{
+  font-style: normal;
+  font-weight: 600 !important;
+}
+.invalid-feedback{
+  margin: 5px 0;
+  color: red;
+}
+.signin-text{
+  padding: 0 0 20px 0;
+  color: #000;
+  font-size: 28px;
+}
+
+.expLinks{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.expLinks li{
+  text-decoration: none;
+  list-style: none;
+}
+.expLinks span{
+  color: #5C73F2;
+}
+
+.form-control{
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  border-color: #2196F3 !important;
+  border-style: solid !important;
+  border-width: 0 0 1px 0 !important;
+  padding: 0px !important;
+  color: #495057;
+  height: auto;
+  border-radius: 0;
+  background-color: white;
+  background-clip: padding-box;
+}
+
+.form-control:focus{
+  color: #495057;
+  outline: none;
+  border-color: white;
+  background-color: white;
+  box-shadow: none; 
+}
+
+.form-group{
+  padding: 0 0 20px 0;
+}
+
+.form-control input{
+  width: 70%;
+  padding: auto;
+}
+
+.form-group a{
+  text-decoration: none;
+  color: #495057;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: flex-end !important;
+}
+
+.social-btn{
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+.social{
+  display: flex;
+  align-items: center;
+}
+.social-btn img{
+  height: 32px;
+  width: 32px;
+  margin-left: 20px;
+}
+
+.social-header{
+  color: #000;
+}
+
+@media(max-width: 600px){
+    .img-fluid{
+      display: none;
+    }
+    .mb-3{
+      display: none !important;
+    }
+    .content{
+      width: 100%;
+    }
+    .col-md-6{
+      width: 100%;
+      margin: 0;
+    }
+    .btn{
+      padding:5px 10px;
+      outline: none;
+      border-radius: 5px;
+      font-size: 20px;
+      border: none;
+    }
+
+
+}
+

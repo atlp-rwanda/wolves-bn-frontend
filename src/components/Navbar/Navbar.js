@@ -17,8 +17,8 @@ class Navbar extends React.Component {
           <Link to="/userlist">
             <li>Setting</li>
           </Link>
-          <Link to="/dropdown">
-            <li>dropdown</li>
+          <Link to="/login">
+            <li>Login</li>
           </Link>
         </ul>
       </div>

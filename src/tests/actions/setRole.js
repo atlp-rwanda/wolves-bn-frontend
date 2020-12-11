@@ -5,7 +5,7 @@ import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import promise from 'redux-promise-middleware';
 import { userRole } from '../../redux/actions/userRole';
-import { GET_LIST } from '../../redux/actions/constants';
+import { GET_LIST } from '../../redux/actions/actionTypes';
 import AuthService from '../../services/auth.service';
 
 const middlewares = [thunk, promise];
@@ -17,19 +17,8 @@ describe('getting users List action', () => {
     store.clearActions();
   });
 
-  //   let email, password;
-
-  //   it('should have type Login', (done) => {
-  //     expect(login(email, password)).toEqual(
-  //       expect.objectContaining({
-  //         type: LOGIN,
-  //         payload: AuthService.login(email, password),
-  //       }),
-  //       done()
-  //     );
-  //   });
   let email, role;
-  it('should have type Login', (done) => {
+  it('should have type Set Role', (done) => {
     expect(userList()).toEqual(
       expect.objectContaining({
         type: GET_LIST,

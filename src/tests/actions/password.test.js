@@ -1,7 +1,7 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import promise from 'redux-promise-middleware';
-import { findUser } from '../../redux/actions/forgot.password';
+import { findUser } from '../../redux/actions/auth/forgot.password';
 import { FIND_USER } from '../../redux/actions/actionTypes';
 import AuthService from '../../services/auth.service';
 

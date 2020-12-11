@@ -50,7 +50,7 @@ export const viewProfile = () => dispatch => {
 
   const token = localStorage.getItem('token');
 
-  axios.get('api/profiles', { headers: { token } })
+  axios.get('/api/profiles', { headers: { token } })
     .then(response => {
       dispatch(viewProfileSuccess(response.data));
     })
@@ -67,7 +67,7 @@ export const updateProfile = (data) => dispatch => {
     formData.append(field, data[field]);
   }
 
-  axios.put('http://localhost:4000/api/profiles', formData, {
+  axios.put('/api/profiles', formData, {
     headers: {
       'Content-Type': 'multipart/form-data',
       token
