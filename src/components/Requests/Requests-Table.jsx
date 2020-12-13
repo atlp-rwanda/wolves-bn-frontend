@@ -11,7 +11,7 @@ const RequestsTable = ({ requests, role, loading }) => {
       <React.Fragment>
         <div className="requests__table--body">
           {requests.map((req, index) => (
-            <Request key={index} reqInfo={req} id={index} role={role} />
+            <Request key={index} reqInfo={req} reqNumber={index} role={role} />
           ))}
         </div>
         <NavButtons />

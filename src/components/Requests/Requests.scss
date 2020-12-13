@@ -11,7 +11,7 @@
 
         li {
             font-weight: 700;
-            flex: 0 0 11%;
+            flex: 0 0 10%;
         }
     }
 
@@ -41,6 +41,20 @@
 
         &--body {
             text-align: center;
+        }
+    }
+
+    .btn-link {
+        background-color: #0029FA;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #fff;
+        border-radius: 10px;
+        transition: all .4s;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(#333, 0.6);
         }
     }
 }

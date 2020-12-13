@@ -15,6 +15,7 @@ import userList from './components/users/usersList.jsx';
 import ResetPassword from './components/auth/password/ResetPassword';
 import './App.scss';
 import './styles/scss/main.scss';
+import RequestForm from './components/Requests/RequestForm/RequestForm.jsx';
 
 // eslint-disable-next-line no-shadow
 function PrivateRoute({ component: Component, authed, ...rest }) {
@@ -39,6 +40,7 @@ class App extends Component {
           <Switch>
             <Route path='/nav' exact component={Navbar} />
             <Route path="/requests" component={Requests} />
+            <Route path="/request" component={RequestForm} />
             <Route path="/" exact component={Welcome} />
             <Route exact path="/dashboard" component={Dashboard}/>
             <Route path="/login" exact component={Login} />
