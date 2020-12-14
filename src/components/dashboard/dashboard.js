@@ -50,7 +50,7 @@ const Dashboard = () => {
                   </li>
                   <h3>Accomodations</h3>
                   <li className='user-option'>
-                  <Link to='/accomodation'>
+                  <Link to='/Accommodation'>
                         <img src={accSvg} />
                         <h4>View all Accomodations</h4>
                   </Link>

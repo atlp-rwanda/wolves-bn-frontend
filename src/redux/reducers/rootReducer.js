@@ -7,6 +7,10 @@ import profileReducer from './profile/profile';
 import passwordReducer from './password/password.reducer';
 import resetPassReducer from './password/reset.password.reducer';
 import destination from './destination.reducer';
+import accommodationReducer from './accommodation.reducer';
+import accommodationCreateReducer from './accommodationCreate.reducer';
+import accommodationUpdateReducer from './accommodationUpdate';
+import locationReducer from './locationReducer';
 
 const rootReducer = combineReducers({
   login: loginReducer,
@@ -16,7 +20,12 @@ const rootReducer = combineReducers({
   userProfile: profileReducer,
   findUser: passwordReducer,
   resetPass: resetPassReducer,
-  topDestination: destination
+  topDestination: destination,
+  accommodation: accommodationReducer,
+  accommodationCreate: accommodationCreateReducer,
+  accommodationUpdate: accommodationUpdateReducer,
+  location: locationReducer
+
 });
 
 export default rootReducer;

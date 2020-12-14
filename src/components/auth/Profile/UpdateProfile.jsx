@@ -156,6 +156,8 @@ export class UpdateProfile extends Component {
             type="file"
             label='Profile image'
             onChange={this.onFileChange}
+            label='Profile image'
+            handleChange={this.onFileChange}
             name="photo"
             className="form-control"
             accept=".png, .jpg, .jpeg"
