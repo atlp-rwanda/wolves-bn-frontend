@@ -3,7 +3,7 @@ import './Requests.scss';
 
 const THeader = ({ role }) => (
   <div className="requests__table--header">
-    <ul >
+    <ul>
       <li className="headers">Index</li>
       {role === 'manager' && <li>Requester</li>}
       <li className="headers">Origin</li>
@@ -11,8 +11,9 @@ const THeader = ({ role }) => (
       <li className="headers">Travel Date</li>
       <li className="headers">Return Date</li>
       <li className="headers">Reason</li>
-      {/* <li>Accommodation</li>
-      <li className="headers">Status</li> */}
+      <li className="headers">Accommodation</li>
+      <li className="headers">Status</li>
+      <li className="headers">Action</li>
     </ul>
   </div>
 );

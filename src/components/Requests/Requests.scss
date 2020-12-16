@@ -1,7 +1,6 @@
 .requests {
     padding: 30px 40px;
-    width: 190vh;
- 
+
     ul {
         list-style: none;
         display: flex;
@@ -11,7 +10,7 @@
 
         li {
             font-weight: 700;
-            flex: 0 0 11%;
+            flex: 0 0 10%;
         }
     }
 
@@ -43,13 +42,29 @@
             text-align: center;
         }
     }
+
+    .btn-link {
+        background-color: #0029FA;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #fff;
+        border-radius: 10px;
+        transition: all .4s;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(#333, 0.6);
+        }
+    }
 }
-.headers{
-    background-color:#2196F3;
+
+.headers {
+    background-color: #2196F3;
 }
+
 .select {
-   // appearance: none;
-    background-color:#2196F3;
+    // appearance: none;
+    background-color: #2196F3;
     border: none;
     padding: 0em 1em 0 0;
     margin-left: 25px;
@@ -59,9 +74,10 @@
     line-height: inherit;
     width: 50vh;
     height: 40px;
-   // text-shadow: 2px 2px;
-  }
- input {
+    // text-shadow: 2px 2px;
+}
+
+input {
     appearance: none;
     background-color: transparent;
     padding: 2em 1em 0 0;
@@ -71,11 +87,12 @@
     cursor: inherit;
     line-height: inherit;
     width: 167vh;
-   // text-shadow: 2px 2px;
-  }
-  .message {
-   //background-color: green;
-   color:green;
+    // text-shadow: 2px 2px;
+}
+
+.message {
+    //background-color: green;
+    color: green;
     width: 40%;
     margin: 20px auto;
     padding: 10px 15px;
@@ -83,6 +100,7 @@
     text-align: center;
     text-transform: uppercase;
 }
+
 .error {
     background-color: #D0454C;
     color: #fff;

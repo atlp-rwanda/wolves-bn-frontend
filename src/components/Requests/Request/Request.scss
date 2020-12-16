@@ -2,7 +2,7 @@
     padding: 20px 30px;
     color: #000;
     margin-bottom: 20px;
-    background-color: #fff;
+    // background-color: #fff;
     // border-radius: 20px;
     box-shadow: 0 5px 10px rgba(#000000, 0.2);
     cursor: pointer;
@@ -14,4 +14,20 @@
 
 .approved {
     color: #529E66;
+}
+
+.btn-edit {
+    color: #CAB23F;
+    text-decoration: none;
+
+    &.disabled {
+        color: #E1C542;
+        cursor: not-allowed;
+        text-decoration: line-through;
+    }
+}
+
+.deleteBtn {
+    color: #DB4437;
+    text-decoration: none;
 }

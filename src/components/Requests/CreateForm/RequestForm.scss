@@ -1,0 +1,45 @@
+.RequestForm {
+    width: 50%;
+    margin: 40px auto;
+
+    .form {
+        padding: 20px 0;
+        border-radius: 20px;
+        box-shadow: 0 10px 20px rgba(#333, 0.5);
+
+
+        &-group {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        input {
+            padding: 0;
+            font-size: 18px;
+            width: 250px;
+            text-align: center;
+        }
+    }
+
+    .Select {
+        select {
+            width: 300px;
+            padding-left: 5px;
+            border-bottom: 1px solid #2196F3;
+        }
+    }
+
+    button {
+        background-color: #2196F3;
+        border: none;
+        outline: none;
+        padding: 10px 15px;
+        color: #fff;
+        transition: all .6s;
+
+        &:hover {
+            transform: translateY(-2px);
+        }
+    }
+}
