@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import Button from '../../common/Button';
 import './Request.scss';
+import { deleteRequest } from '../../../redux/actions/requests/delete/deleteRequest';
 
 const Request = ({
   reqNumber,
@@ -17,6 +19,8 @@ const Request = ({
     request_status,
     requester,
   },
+  history,
+  onDelete,
 }) => {
   const statusClass = request_status === 'pending' ? 'pending' : 'approved';
 
@@ -49,9 +53,30 @@ const Request = ({
             </a>
           </li>
         )}
+        <li>
+          <a
+            href="#"
+            className="deleteBtn"
+            onClick={() => {
+              onDelete(id);
+            }}
+          >
+            Delete
+          </a>
+        </li>
       </ul>
     </div>
   );
 };
 
-export default Request;
+const mapStateToProps = ({ requests }) => ({
+  loading: requests.loading,
+  error: requests.error,
+  response: requests.response,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  onDelete: (id) => dispatch(deleteRequest(id)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Request);

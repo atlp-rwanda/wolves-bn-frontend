@@ -35,7 +35,6 @@ class Requests extends Component {
   };
 
   handleChange = (event) => {
-    // console.log('======', event.target.name, '=', event.target.value);
     if (event.target.name === 'departure') {
       this.props.searchTrip(event.target.value);
     } else if (event.target.name === 'destination') {
